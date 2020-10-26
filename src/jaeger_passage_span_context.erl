@@ -281,8 +281,8 @@ decode_baggage_items(<<KeySize:32, Key:KeySize/binary,
 
 -spec escape(binary()) -> binary().
 escape(Bin) ->
-    list_to_binary(http_uri:encode(binary_to_list(Bin))).
+    Bin.
 
 -spec unescape(binary()) -> binary().
 unescape(Bin) ->
-    list_to_binary(http_uri:decode(binary_to_list(Bin))).
+    Bin.
